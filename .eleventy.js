@@ -14,9 +14,9 @@ const markdown = require('./utils/markdown.js')
 const IS_PRODUCTION = process.env.ELEVENTY_ENV === 'production'
 const CONTENT_GLOBS = {
     posts: 'src/posts/**/*.md',
+    projects: 'src/projects/**/*.md',
     drafts: 'src/drafts/**/*.md',
     notes: 'src/notes/*.md',
-    projects: 'src/projects/**/*.md',
     media: '*.jpg|*.png|*.gif|*.mp4|*.webp|*.webm'
 }
 
