@@ -7,6 +7,7 @@ collections:
   - name: "blog"
     label: "Blog"
     folder: "src/posts"
+    path: "{{slug}}"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields:
