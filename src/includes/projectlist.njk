@@ -1,0 +1,66 @@
+
+<div class="note--detail h-entry">
+    {% for project in projectlist %}
+        <!-- <h1 class="note__title">{{ project.data.title }}</h1>
+        <div class="note__main">
+            <div class="note__meta">
+                <p class="note__author h-card p-author" rel="author">
+                    <span class="note__author__link">
+                        <img src="{{project.fileSlug}}/{{ project.data.image }}" alt="">
+                        <strong class="note__author__name p-name">@mxbck</strong>
+                    </span>
+                </p>
+                <span class="note__meta__divider" aria-hidden="true">&sdot;</span>
+                <time class="note__date dt-published" datetime="{{ note.date | dateToISO }}">
+                    {{ project.date | readableDate('dd LLL yyyy') }}
+                </time>
+                {% if project.tags %}
+                <div class="note__tags">
+                    {% for tag in project.tags %}
+                        <span class="note__tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            <div class="note__content">
+                <div class="e-content p-name markdown">
+                    <h1 class="note__title">{{ project.title }}</h1>
+                        {{ content | safe }}
+                </div>
+            </div>
+        </div>
+        <a href="{{ project.url }}" class="note__link">
+            <span class="sr-only">View Project</span>
+        </a> -->
+        <div class="card">
+            <div class="card-text">
+                <div class="portada">
+                    <img src="{{project.fileSlug}}/{{ project.data.image }}" alt="">
+                </div>
+                <div class="title-total">   
+                    <!-- <div class="title">Ant Collector</div> -->
+                    <a href="{{project.url}}">
+                        <h2>{{ project.data.title }}</h2>
+                    </a>    
+                    {% if project.data.tags %}
+                        <span class="tag">
+                            {% for tag in project.data.tags %}
+                            <!-- href="/project/tag/{{tag}}" -->
+                                <a
+                                >
+                                    {{ tag }}
+                                </a>
+                                {% if tag !== project.data.tags.at(-1) %}
+                                    <a> - </a>
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+                    {% endif %}
+                    <br>
+                    <div class="desc">{{ project.data.description }}</div>
+                </div>
+            </div>
+        </div>
+        <br>
+    {% endfor  %}
+</div>

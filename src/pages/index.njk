@@ -1,0 +1,40 @@
+---
+layout: base
+eleventyNavigation:
+  key: Home
+  order: 1
+permalink: /
+---
+
+<div class="hero fade-in">
+    <div class="hero__inner">
+        <h1 class="hero__title">A Data Learner</h1>
+        <p class="hero__pretitle"><a href="/about/">Hello, my name is Uyen</a></p>
+
+        <div class="hero__content">
+            <p>
+                I'm a Data Engineer from the 
+                <a href="https://en.uel.edu.vn/" class="hero__link">University of Economics and Law (HCMU-VNU)</a>
+                , passionate about continuous <a href="/notes" class="hero__link">learning</a> and applying knowledge to real-world <a href="/project" class="hero__link">projects</a>. Explore my <a href="/blog" class="hero__link">blog</a> for insights into data engineering trends and my learning journey. Visit the <a href="/about" class="hero__link">about</a> section to get to know me more personally.
+                <br class="hero__br" />
+            </p>
+        </div>
+    </div>
+</div>
+
+{% if collections.featured.length %}
+<div class="u-mb4">
+    <h2>Featured Posts</h2>
+    {% include "featuredposts.njk" %}
+</div>
+{% endif %}
+
+{# 
+<div class="u-mb4">
+    {% signup %}
+    I'm starting an email list for people interested in front-end development! 
+    You can join here to be notified first whenever new posts are published. 
+    I'll send emails about once a month and you can unsubscribe any time.
+    {% endsignup %}
+</div> 
+#}

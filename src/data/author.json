@@ -1,0 +1,35 @@
+{
+    "name": "Uyen Nguyen Ngoc Phuong",
+    "email": "nnphuyen563@gmail.com",
+    "avatar": "/assets/images/avatar2.jpg",
+    "social": {
+        "twitter": {
+            "name": "mxbck",
+            "url": "https://twitter.com/mxbck"
+        },
+        "github": {
+            "name": "nnphuyen563",
+            "url": "https://github.com/nnphuyen563"
+        },
+        "mastodon": {
+            "name": "mxbck",
+            "url": "https://front-end.social/@mxbck"
+        },
+        "codepen": {
+            "name": "mxbck",
+            "url": "https://codepen.io/mxbck/"
+        },
+        "notist": {
+            "name": "mxb",
+            "url": "https://noti.st/mxb"
+        },
+        "linkedin": {
+            "name": "nnpuyen",
+            "url": "https://www.linkedin.com/in/nnpuyen/"
+        },
+        "instargram": {
+            "name": "test",
+            "url": "test"
+        }
+    }
+}

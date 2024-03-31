@@ -1,0 +1,23 @@
+---
+layout: base
+tags: nav
+title: Learning
+eleventyNavigation:
+  key: Learning
+  order: 3
+permalink: notes/{% if pagination.pageNumber %}{{ pagination.pageNumber }}/{% endif %}
+pagination:
+  data: collections.notes
+  size: 10
+  alias: notes
+---
+
+{# Inline these three icons because external svg symbols dont always render in dynamically injected content. #}
+
+
+
+<div class="loader">
+    <div class="content">
+        in developing ...
+    </div>
+</div>

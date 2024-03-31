@@ -1,0 +1,69 @@
+<div class="flex sm:space-x-24 postlist__flex">
+    <div class="postlist__tags_list">
+        <div class="px-6 py-4">
+            <a href="/blog">
+                <h3 class="postlist__flex__header" >All Posts</h3>
+            </a>
+            <ul class = "postlist__flex__tags">
+                {% for tag in collections.tagList %}
+                    <li>
+                        <a
+                            href = "/blog/tag/{{tag}}"
+                        >
+                            {{tag}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="postlist__item_list">
+        <ol reversed class="postlist" start="{{ postlist.length }}">
+            {% for post in postlist | reverse %}
+                <li class="postlist__item h-entry {% if post.data.draft %}postlist__item--draft{% endif %}">
+                    
+                    <time class="postlist__meta postlist__date dt-published" datetime="{{ post.date | dateToISO }}">
+                        {{ post.date | readableDate('dd LLL yyyy') }}
+                    </time>
+
+                    <h2 class="postlist__title p-name">
+                        <a
+                            href="{{ post.url | url }}"
+                            class="postlist__link u-url"
+                            rel="bookmark"
+                        >
+                            {{ post.data.title }}
+                        </a>
+                    </h2>
+
+                    <div class="postlist__meta">
+                        {% if post.data.tags %}
+                            <span class="postlist__tags p-category">
+                                <a>| </a>
+                                {% for tag in post.data.tags %}
+                                    <a
+                                        href="/blog/tag/{{tag}}"
+                                    >
+                                        {{ tag }} | 
+                                    </a>
+                                {% endfor %}
+                            </span>
+                        {% endif %}
+
+                        {% if post.data.draft %}
+                            <span class="postlist__status">(Draft)</span>
+                        {% endif %}
+                    </div>
+
+                    <p class="postlist__excerpt p-summary">
+                    {% if post.data.description %}
+                        {{ post.data.description }}
+                    {% else %}
+                        {{ post.templateContent | excerpt | striptags }}
+                    {% endif %}
+                    </p>
+                </li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>

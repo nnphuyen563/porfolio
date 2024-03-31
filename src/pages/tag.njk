@@ -1,0 +1,20 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    addAllPagesToCollections: true
+layout: base
+title: Blog
+permalink: /blog/tag/{{ tag | slugify }}/
+---
+<div class="page page--blog">
+    <header class="page__header">
+        <h1 class="page__title">{{ title }}</h1>
+    </header>
+    <!-- <h>{{tag}}</h> -->
+    <div class="page__content">
+        {%- set postlist = collections.tags[tag] -%}
+        {% include "postlist.njk" %}
+    </div>
+</div>

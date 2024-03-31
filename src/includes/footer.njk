@@ -1,0 +1,20 @@
+<footer class="footer h-card" role="contentinfo">
+    <div class="footer__inner container">
+        <p class="footer__item">
+            <strong>&copy; 2024&ndash;{{ build.timestamp | dateToFormat('yyyy') }}</strong><br />
+            <a class="p-name u-url" rel="me" href="{{ site.url }}">{{ author.name }}</a>
+        </p>
+
+        <!-- <p class="footer__item">
+            <strong>Work</strong><br />
+            <a href="https://www.codista.com">Codista</a>
+        </p> -->
+
+
+        <p class="footer__item footer__item--right">
+            <a href="{{ author.social.linkedin.url }}" title="Linkedin" class="footer__icon">{% icon "linkedin" %}</a>
+            <a href="{{ author.social.github.url }}" title="Github" class="footer__icon">{% icon "github" %}</a>
+        </p>
+
+    </div>
+</footer>

@@ -1,0 +1,102 @@
+.postlist {
+    @include container-narrow;
+
+    &__item_list{
+        margin-left: 6rem;
+    }
+
+    &__item {
+        margin-bottom: 3rem;
+
+        @include mq(md) {
+            margin-bottom: 5rem;
+        }
+    }
+    &__link {
+        display: block;
+
+        .postlist__item--draft & {
+            color: var(--color-secondary);
+        }
+    }
+    &__title {
+        margin-bottom: 0;
+    }
+    &__meta {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+        color: var(--color-text-offset);
+    }
+    &__tags {
+        font-family: Georgia, Times, serif;
+        text-transform: uppercase;
+        font-size: 0.675em;
+        letter-spacing: 3px;
+        font-weight: bold;
+        
+        & > a {
+            color: var(--color-text-offset);
+        }
+    }
+    &__status {
+        font-weight: 700;
+        color: var(--color-secondary);
+    }
+    &__excerpt {
+        @include body-text();
+    }
+
+    &__flex {
+        flex-direction: row;
+        display: flex;
+        
+        &__header { // Here's where we add the new styles
+            font-size: 1.3em;
+            text-transform: uppercase;
+            margin-left: 1.5rem;
+            margin-top: 0.2rem;
+        }
+
+        &__tags {
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 3px;
+            font-weight: bold;
+
+            margin-top: 0.5rem;
+            margin-left: 3rem;
+            margin-bottom: 1rem;
+
+            & > li {
+                margin-top: 0.2rem;
+
+                & > a {
+                    color: var(--color-text-offset);
+                }
+            }
+        }
+    }
+
+    &__tags_list {
+        height: 100%; // Equivalent to h-full
+        max-height: 100vh; // Equivalent to max-h-screen
+        min-width: 280px; // Equivalent to min-w-[280px]
+        max-width: 280px; // Equivalent to max-w-[280px]
+        flex-wrap: wrap; // For flex items to wrap
+        overflow: auto; // Allows scrolling for overflow
+        border-radius: 0.25rem; // Assuming a standard rounded amount, adjust as needed
+        background-color: #F9FAFB; // bg-gray-50, for dark mode, you would need to use a media query or class
+        padding-top: 1.25rem; // pt-5, translates to padding top of 5 * 0.25rem (assuming 1rem = 4)
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); // shadow-md
+        // For dark mode, specific conditions or classes are needed, shown below
+        @media (prefers-color-scheme: dark) {
+          background-color: rgba(31, 41, 55, 0.7); // dark:bg-gray-900/70
+          box-shadow: 0 4px 6px -1px rgba(55, 65, 81, 0.4), 0 2px 4px -1px rgba(55, 65, 81, 0.4); // dark:shadow-gray-800/40
+        }
+        
+        // Responsive adjustments with a breakpoint for 'sm' (small screens)
+        @media (min-width: 640px) { // This is an example breakpoint for 'sm'
+          display: flex;
+        }
+    }
+}
