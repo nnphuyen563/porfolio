@@ -9,7 +9,7 @@ collections:
     folder: "src/posts"
     path: "{{slug}}"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{year}}-{{month}}-{{day}}-index"
     fields:
       - { label: "Title", name: "title", widget: "string", default: "New blog" }
       - { label: "Tags", name: "tags", widget: "list", allow_add: true, add_to_top: false, min: 1, default: ["general"]}
