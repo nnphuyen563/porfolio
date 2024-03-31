@@ -71,25 +71,6 @@ layout: base
                 <img class="u-photo" src="{{ author.avatar | url | absoluteUrl(site.url) }}" />
             </p>
         </div>
-
-        {% if draft %}
-            <p class="post__footer-incomplete" aria-hidden="true">&hellip;</p>
-        {% else %}
-            <p class="post__footer-info">
-                Published in [{{ tags | join(', ') }}] &sdot; {{ page.date | readableDate('dd LLL yyyy') }} <br/>
-                <a href="{{ site.repo }}/tree/master/{{ page.inputPath }}" title="suggest a change to this post by submitting a PR">Edit this Post</a>
-            </p>
-
-            <a
-                href="{{ author.social.mastodon.url }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Follow {{ author.name }} on Mastodon"
-                class="btn btn--mastodon"
-            >
-                {% icon "mastodon" %} Follow @{{ author.social.mastodon.name }}
-            </a>
-        {% endif %}
     </div>
     
 </article>
