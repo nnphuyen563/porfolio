@@ -7,9 +7,10 @@ collections:
   - name: "blog"
     label: "Blog"
     folder: "src/posts"
-    path: "{{slug}}"
+    path: "{{title}}/{{slug}}"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-index"
+    identifier_field: "title"
     fields:
       - { label: "Title", name: "title", widget: "string", default: "New blog" }
       - { label: "Tags", name: "tags", widget: "list", allow_add: true, add_to_top: false, min: 1, default: ["general"]}
