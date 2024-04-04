@@ -10,8 +10,8 @@ collections:
     label: "Blog"
     folder: "src/posts"
     create: true
-    path: "{{year}}/{{month}}/{{slug}}"
-    slug: "{{year}}-{{month}}-{{day}}-{{title}}"
+    path: "{{year}}/{{month}}/{{title}}/{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-index"
     preview_path: blog/{{slug}}
     identifier_field: "title"
     fields:
@@ -24,8 +24,8 @@ collections:
     label: "Project"
     folder: "src/projects"
     create: true
-    path: "{{year}}/{{month}}/{{slug}}"
-    slug: "{{year}}-{{month}}-{{day}}-{{title}}"
+    path: "{{year}}/{{month}}/{{title}}/{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-index"
     preview_path: project/{{slug}}
     identifier_field: "title"
     fields:

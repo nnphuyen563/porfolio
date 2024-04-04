@@ -36,18 +36,12 @@ module.exports = function (config) {
     config.addPlugin(pluginRss)
     config.addPlugin(pluginNavigation)
     config.addPlugin(pluginSyntaxHighlight)
-    config.addPlugin(pluginPageAssets, {
-        mode: 'directory',
-        postsMatching: 'src/posts/*/*.md',
-        assetsMatching: CONTENT_GLOBS.media,
-        silent: true
-    })
 
     config.addPlugin(pluginPageAssets, {
         mode: 'directory',
-        postsMatching: 'src/projects/*/*.md',
+        postsMatching: 'src/posts|projects/**/*.md',
         assetsMatching: CONTENT_GLOBS.media,
-        silent: true
+        silent: false
     })
 
     config.addPlugin(pluginShareHighlight)

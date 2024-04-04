@@ -14,13 +14,15 @@
         "eleventy:prod": "cross-env ELEVENTY_ENV=production eleventy",
         "workbox": "workbox generateSW workbox.config.js",
         "clean": "del-cli dist",
-        "debug": "DEBUG=Eleventy* npm start"
+        "debug": "run-script-os",
+        "debug:win32": "set DEBUG=Eleventy* & npm start",
+        "debug:darwin:linux": "DEBUG=Eleventy* npm start"
     },
     "repository": {
         "type": "git",
-        "url": "http://github.com/maxboeck/mxb"
+        "url": "https://github.com/nnphuyen563"
     },
-    "author": "Max Böck",
+    "author": "Uyen Nguyen Ngoc Phuong",
     "dependencies": {
         "@11ty/eleventy": "^2.0.1",
         "@11ty/eleventy-navigation": "^0.3.5",
@@ -52,6 +54,7 @@
         "node-fetch": "^2.6.7",
         "npm-run-all": "^4.1.5",
         "preact": "^10.5.7",
+        "run-script-os": "^1.1.6",
         "sanitize-html": "^2.3.0",
         "sass": "^1.69.7",
         "svg-sprite": "^2.0.2",
