@@ -153,12 +153,12 @@
         }
 
         @include mq(lg) {
-            padding: 2rem 3rem;
+            padding: 1rem 3rem;
         }
         @media screen and (min-width: 1040px) {
             .post & {
-                margin-left: -180px;
-                margin-right: -180px;
+                margin-left: 0px;
+                margin-right: 0px;
                 border-radius: $border-radius * 2;
             }
         }

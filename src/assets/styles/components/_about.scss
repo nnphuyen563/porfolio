@@ -18,6 +18,7 @@
 
         p {
             margin-bottom: 1rem;
+            font-size: 2rem;
         }
     }
     &__social {
@@ -45,7 +46,13 @@
             padding: 2rem 3rem;
         }
         &__content {
-            @include container-narrow;
+            @include container-wide;
+
+            font-size: x-large !important;
+
+            &>h2 {
+                font-size: xx-large;
+            }
         }
     }
 }

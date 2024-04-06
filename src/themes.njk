@@ -14,7 +14,7 @@ eleventyExcludeFromCollections: true
 {%- endmacro -%}
 
 {%- set default = themes|findById('default') -%}
-{%- set dark = themes|findById('dark') -%}
+{%- set dark = themes|findById('default') -%}
 
 :root {
     {{ colorscheme(default.colors) }}
