@@ -36,10 +36,12 @@ const markdown = markdownIt({
     },
     renderImage(image, attributes) {
         const [ src, attrs ] = attributes;
-        if (src.includes("\\") {
-            const img_src = src.split("\\").pop();
+        var img_src;
+
+        if (src.includes("\\")) {
+            img_src = src.split("\\").pop();
         } else {
-            const img_src = src.split("/").pop();
+            img_src = src.split("/").pop();
         }
 
         const imageMarkup = `<img src="${img_src}" alt="${attrs.alt}" title="${attrs.title}">`;
