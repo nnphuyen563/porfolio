@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
 
-.card {
+.card {   
+  @include container-list;
+
   background: #fff;
   display: flex;
   flex-direction: row;
@@ -23,7 +25,7 @@
 }
 .card .desc {
   padding: 0.5rem 1rem;
-  font-size: 12px;
+  font-size: 18px;
 }
 .card .actions {
   display: grid;
@@ -59,7 +61,8 @@ path {
     max-height: 10rem;
     background-position: bottom center;
     background-size: cover;
-    margin: 30px;
+    margin-top: 25%;
+    margin-left: 10%;
   }
 }
 
@@ -74,12 +77,4 @@ button {
     color: #4CAF50  ;
     transform: rotate(22deg)
   }
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
 }

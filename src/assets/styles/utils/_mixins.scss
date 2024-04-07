@@ -118,6 +118,16 @@
     margin-right: auto;
 }
 
+
+@mixin container-list() {
+    width: 100%;
+    max-width: $container-list-max-width;
+    max-width: var(--content-max-width, #{$container-list-max-width});
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 @mixin stretched-link() {
     &::after {
         content: '';
