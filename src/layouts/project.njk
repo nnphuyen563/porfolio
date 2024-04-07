@@ -81,3 +81,18 @@ layout: base
     {% include 'otherprojects.njk' %}
 </div>
 {% endif %}
+<script>
+    // Function to add index numbers to figcaptions
+      // Select all figure elements with the class "markdown-image"
+    const figures = document.querySelectorAll('figure.markdown-image');
+      // Loop through each figure element
+    figures.forEach((figure, index) => {
+        // Find the figcaption within the current figure element
+        const figcaption = figure.querySelector('figcaption');
+        
+        // If a figcaption is found, append the index number to its text content
+        if (figcaption) {
+            figcaption.textContent = `Figure ${index + 1}. ${figcaption.textContent}`;
+        }
+    });
+</script>

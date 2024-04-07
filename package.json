@@ -60,5 +60,8 @@
         "svg-sprite": "^2.0.2",
         "webpack": "^5.89.0",
         "workbox-cli": "^6.5.4"
+    },
+    "devDependencies": {
+        "markdown-it-eleventy-img": "^0.10.2"
     }
 }
