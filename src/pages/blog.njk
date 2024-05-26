@@ -12,7 +12,7 @@ permalink: /blog/
         <h1 class="page__title">{{ title }}</h1>
     </header>
     <div class="page__content">
-        {%- set postlist = collections.tags['general'] -%}
+        {%- set postlist = collections.posts -%}
         {% include "postlist.njk" %}
     </div>
 </div>

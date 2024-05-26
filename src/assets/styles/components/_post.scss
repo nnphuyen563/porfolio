@@ -1,7 +1,11 @@
 .post {
     &__header {
         @extend .page__header;
+        & > h1 {
+            font-size: 4.5rem !important;
+        }
     }
+
     &__title {
         @extend .page__title;
         text-wrap: balance;

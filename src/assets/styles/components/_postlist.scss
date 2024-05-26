@@ -44,6 +44,8 @@
     }
     &__excerpt {
         @include body-text();
+
+        font-size: 1rem !important;
     }
 
     &__flex {
