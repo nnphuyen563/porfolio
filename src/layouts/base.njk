@@ -12,6 +12,7 @@
         <title>{%- if title -%}{{ title }} | {{ site.title }}{%- else -%}{{ site.title }}{%- endif -%}</title>
         <link rel="preload" href="{{ '/assets/fonts/noe-display-medium.woff2' | url }}" as="font" type="font/woff2" crossorigin>
         <!-- <link rel="preconnect" href="https://webmention.io"> -->
+        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
         {% if not build.naked %}
             <link rel="stylesheet" href="{{ '/assets/styles/themes.css' | url }}">
@@ -21,6 +22,7 @@
         {% include "meta.njk" %}
         <script>{% include "initialtheme.njk" %}</script>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+        <script data-goatcounter="https://nnphuyen.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     </head>
     <body>
         <a href="#main" class="sr-skip-link">skip to main content</a>
