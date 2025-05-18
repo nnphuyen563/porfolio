@@ -51,5 +51,10 @@
             });
         }
         </script>
+        {% set fullURL = site.url | default("") %}
+        <link
+          rel="canonical"
+          href="{{ fullURL }}{{ page.url }}"
+        >
     </body>
 </html>
